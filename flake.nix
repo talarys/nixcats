@@ -49,23 +49,23 @@
               conform-nvim
               stay-centered-nvim
             ];
-
-            optionalPlugins = {
-              general = with pkgs.vimPlugins; [
-                lazydev-nvim
-              ];
-            };
-
-            themer =
-              with pkgs.vimPlugins;
-              (builtins.getAttr (categories.colorscheme or "catppuccin") {
-                "onedark" = onedark-nvim;
-                "catppuccin" = catppuccin-nvim;
-                "catppuccin-mocha" = catppuccin-nvim;
-                "tokyonight" = tokyonight-nvim;
-                "tokyonight-day" = tokyonight-nvim;
-              });
           };
+
+          optionalPlugins = {
+            general = with pkgs.vimPlugins; [
+              lazydev-nvim
+            ];
+          };
+
+          themer =
+            with pkgs.vimPlugins;
+            (builtins.getAttr (categories.colorscheme or "catppuccin") {
+              "onedark" = onedark-nvim;
+              "catppuccin" = catppuccin-nvim;
+              "catppuccin-mocha" = catppuccin-nvim;
+              "tokyonight" = tokyonight-nvim;
+              "tokyonight-day" = tokyonight-nvim;
+            });
 
           python3.libraries = {
             test = (_: [ ]);
