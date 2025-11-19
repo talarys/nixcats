@@ -36,7 +36,9 @@
           startupPlugins = {
             general = with pkgs.vimPlugins; [
               snacks-nvim
-              nvim-lspconfig
+              smart-splits-nvim
+              flash-nvim
+              nvim-web-devicons
               blink-cmp
               nvim-treesitter.withAllGrammars
               lualine-nvim
@@ -45,6 +47,7 @@
               which-key-nvim
               nvim-lint
               conform-nvim
+              stay-centered-nvim
             ];
 
             optionalPlugins = {
