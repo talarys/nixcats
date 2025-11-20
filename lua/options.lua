@@ -2,6 +2,8 @@
 -- See `:help lua-options`
 -- and `:help lua-options-guide`
 
+vim.cmd.colorscheme "catppuccin-mocha"
+
 vim.o.cursorline = true;
 vim.o.cursorlineopt = "number";
 vim.o.pumblend = 0;
@@ -29,6 +31,7 @@ vim.o.undofile = true;
 vim.o.wrap = false;
 vim.o.virtualedit = "block";
 vim.o.winminwidth = 5;
+vim.o.winblend = 2;
 vim.o.fileencoding = "utf-8";
 vim.o.list = true;
 vim.o.smoothscroll = true;
@@ -36,3 +39,4 @@ vim.o.autoread = true;
 vim.o.autowrite = true;
 vim.o.swapfile = false;
 vim.o.updatetime = 500;
+

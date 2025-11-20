@@ -35,19 +35,40 @@
 
           startupPlugins = {
             general = with pkgs.vimPlugins; [
-              snacks-nvim
-              smart-splits-nvim
               flash-nvim
-              nvim-web-devicons
-              blink-cmp
+              smart-splits-nvim
+              snacks-nvim
+              todo-comments-nvim
+              which-key-nvim
               nvim-treesitter.withAllGrammars
-              lualine-nvim
-              lualine-lsp-progress
               gitsigns-nvim
               which-key-nvim
               nvim-lint
               conform-nvim
               stay-centered-nvim
+            ];
+
+            ui = with pkgs.vimPlugins; [
+              nvim-web-devicons
+              lualine-nvim
+              lualine-lsp-progress
+              catppuccin-nvim
+              colorizer
+            ];
+
+            mini = with pkgs.vimPlugins; [
+              mini-ai
+              mini-comment
+              mini-completion
+              mini-move
+              mini-operators
+              mini-pairs
+              mini-splitjoin
+              mini-snippets
+              mini-surround
+              mini-bracketed
+              mini-starter
+              mini-indentscope
             ];
           };
 
@@ -56,16 +77,6 @@
               lazydev-nvim
             ];
           };
-
-          themer =
-            with pkgs.vimPlugins;
-            (builtins.getAttr (categories.colorscheme or "catppuccin") {
-              "onedark" = onedark-nvim;
-              "catppuccin" = catppuccin-nvim;
-              "catppuccin-mocha" = catppuccin-nvim;
-              "tokyonight" = tokyonight-nvim;
-              "tokyonight-day" = tokyonight-nvim;
-            });
 
           python3.libraries = {
             test = (_: [ ]);
@@ -94,8 +105,8 @@
             };
             categories = {
               general = true;
-              themer = true;
-              colorscheme = "catppuccin-mocha";
+              ui = true;
+              mini = true;
             };
             extra = { };
           };
