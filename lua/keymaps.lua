@@ -20,18 +20,19 @@ vim.keymap.set("i", "<c-s>", "<esc>:w ++p<cr>", { desc = "Save file" })
 vim.keymap.set("i", "<a-j>", "<esc>:m .+1<cr>==gi", { desc = "Move Line Down" })
 vim.keymap.set("i", "<a-k>", "<esc>:m .-2<cr>==gi", { desc = "Move Line Up" })
 
-vim.keymap.set("n", "<c-a-h>", ":lua require('smart-splits').resize_left()<cr>", { desc = "Resize Left" })
-vim.keymap.set("n", "<c-a-j>", ":lua require('smart-splits').resize_down()<cr>", { desc = "Resize Down" })
-vim.keymap.set("n", "<c-a-k>", ":lua require('smart-splits').resize_up()<cr>", { desc = "Resize Up" })
-vim.keymap.set("n", "<c-a-l>", ":lua require('smart-splits').resize_right()<cr>", { desc = "Resize Right" })
-vim.keymap.set("n", "?", ":lua require('flash').jump({ forward = true, wrap = true, multi_window = true }) end",
+vim.keymap.set("n", "<c-a-h>", function() require('smart-splits').resize_left() end, { desc = "Resize Left" })
+vim.keymap.set("n", "<c-a-j>", function() require('smart-splits').resize_down() end, { desc = "Resize Down" })
+vim.keymap.set("n", "<c-a-k>", function() require('smart-splits').resize_up() end, { desc = "Resize Up" })
+vim.keymap.set("n", "<c-a-l>", function() require('smart-splits').resize_right() end, { desc = "Resize Right" })
+
+vim.keymap.set("n", "?", function() require('flash').jump({ forward = true, wrap = true, multi_window = true }) end,
     { desc = "Flash Search" })
 
-vim.keymap.set("n", "<c-h>", ":lua require('smart-splits').move_cursor_left()<cr>", { desc = "Move Cursor Left" })
-vim.keymap.set("n", "<c-j>", ":lua require('smart-splits').move_cursor_down()<cr>", { desc = "Move Cursor Down" })
-vim.keymap.set("n", "<c-k>", ":lua require('smart-splits').move_cursor_up()<cr>", { desc = "Move Cursor Up" })
-vim.keymap.set("n", "<c-l>", ":lua require('smart-splits').move_cursor_right()<cr>", { desc = "Move Cursor Right" })
-vim.keymap.set("n", "<c-\\>", ":lua require('smart-splits').move_cursor_previous()<cr>",
+vim.keymap.set("n", "<c-h>", function() require('smart-splits').move_cursor_left() end, { desc = "Move Cursor Left" })
+vim.keymap.set("n", "<c-j>", function() require('smart-splits').move_cursor_down() end, { desc = "Move Cursor Down" })
+vim.keymap.set("n", "<c-k>", function() require('smart-splits').move_cursor_up() end, { desc = "Move Cursor Up" })
+vim.keymap.set("n", "<c-l>", function() require('smart-splits').move_cursor_right() end, { desc = "Move Cursor Right" })
+vim.keymap.set("n", "<c-\\>", function() require('smart-splits').move_cursor_previous() end,
     { desc = "Move Cursor Previous" })
 vim.keymap.set("n", "<leader>dd", function()
     local any_diff = false
@@ -100,7 +101,8 @@ vim.keymap.set("n", "<leader>id",
 
 vim.keymap.set("n", "n", "nzzzv", { desc = "Move to center" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Moving to center" })
-vim.keymap.set("n", "<leader>uC", ":lua require('stay-centered').toggle", { desc = "Toggle stay-centered.nvim" })
+vim.keymap.set("n", "<leader>uC", function() require('stay-centered').toggle() end,
+{ desc = "Toggle stay-centered.nvim" })
 vim.keymap.set("n", "<leader>ft",
     function()
         vim.ui.input({ prompt = "Enter FileType: " }, function(input)
