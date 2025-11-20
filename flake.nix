@@ -73,6 +73,7 @@
               lualine-lsp-progress
               catppuccin-nvim
               colorizer
+              noice-nvim
             ];
 
             mini = with pkgs.vimPlugins; [
