@@ -2,8 +2,6 @@
 -- See `:help lua-options`
 -- and `:help lua-options-guide`
 
-vim.cmd.colorscheme "catppuccin-mocha"
-
 vim.o.cursorline = true;
 vim.o.cursorlineopt = "number";
 vim.o.pumblend = 0;
@@ -39,4 +37,3 @@ vim.o.autoread = true;
 vim.o.autowrite = true;
 vim.o.swapfile = false;
 vim.o.updatetime = 500;
-
