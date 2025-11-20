@@ -46,7 +46,7 @@
 
               stylua
               shfmt
-              stylua
+              ruff
             ];
           };
 
@@ -64,6 +64,7 @@
               conform-nvim
               stay-centered-nvim
               nvim-lspconfig
+              conform-nvim
             ];
 
             ui = with pkgs.vimPlugins; [
