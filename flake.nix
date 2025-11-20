@@ -29,6 +29,23 @@
           lspsAndRuntimeDeps = {
             general = with pkgs; [
               lua-language-server
+              bash-language-server
+              basedpyright
+              biome
+              clang-tools
+              vscode-langservers-extracted
+              gleam
+              gopls
+              # haskellPackages.hls
+              just-lsp
+              nixd
+              nushell
+              rust-analyzer
+              tailwindcss
+              zls
+
+              stylua
+              shfmt
               stylua
             ];
           };
@@ -46,6 +63,7 @@
               nvim-lint
               conform-nvim
               stay-centered-nvim
+              nvim-lspconfig
             ];
 
             ui = with pkgs.vimPlugins; [
