@@ -4,3 +4,7 @@ require("diagnostics")
 require("colorscheme")
 require("lsp")
 require("format")
+
+require("plugins.noice")
+require("plugins.mini")
+require("plugins.snacks")
