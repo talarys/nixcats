@@ -52,43 +52,43 @@
 
           startupPlugins = {
             general = with pkgs.vimPlugins; [
+              blink-cmp
+              conform-nvim
               flash-nvim
+              gitsigns-nvim
+              nvim-lint
+              nvim-lspconfig
+              nvim-treesitter.withAllGrammars
               smart-splits-nvim
               snacks-nvim
+              stay-centered-nvim
               todo-comments-nvim
               which-key-nvim
-              nvim-treesitter.withAllGrammars
-              gitsigns-nvim
               which-key-nvim
-              nvim-lint
-              conform-nvim
-              stay-centered-nvim
-              nvim-lspconfig
-              conform-nvim
             ];
 
             ui = with pkgs.vimPlugins; [
-              nvim-web-devicons
-              lualine-nvim
-              lualine-lsp-progress
               catppuccin-nvim
               colorizer
+              lualine-lsp-progress
+              lualine-nvim
               noice-nvim
+              nvim-web-devicons
             ];
 
             mini = with pkgs.vimPlugins; [
               mini-ai
+              mini-bracketed
               mini-comment
               mini-completion
+              mini-indentscope
               mini-move
               mini-operators
               mini-pairs
-              mini-splitjoin
               mini-snippets
-              mini-surround
-              mini-bracketed
+              mini-splitjoin
               mini-starter
-              mini-indentscope
+              mini-surround
             ];
           };
 
