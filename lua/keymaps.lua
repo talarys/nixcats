@@ -48,9 +48,9 @@ vim.api.nvim_set_keymap('n', 'C', '"_C', { noremap = true, silent = true })
 
 -- Visual mode
 vim.api.nvim_set_keymap('v', 'x', '"_d', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'X', '"_d', { noremap = true, silen = true })
+vim.api.nvim_set_keymap('v', 'X', '"_d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'c', '"_c', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'C', '"_c', { noremap = true, silet = true })
+vim.api.nvim_set_keymap('v', 'C', '"_c', { noremap = true, silent = true })
 
 -- In visual mode, paste from the clipboard without overwriting it
 vim.api.nvim_set_keymap("v", "p", '"_dP', { noremap = true, silent = true })
