@@ -1,6 +1,13 @@
-require("keymaps")
 require("options")
 require("diagnostics")
-require("colorscheme")
 require("lsp")
-require("format")
+require("ui")
+
+require("plugins.mini")
+require("plugins.snacks")
+require("plugins.smartsplits")
+require("plugins.conform")
+require("plugins.blink")
+
+require("keymaps")
+require("autocmds")

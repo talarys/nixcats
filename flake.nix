@@ -63,7 +63,7 @@
               snacks-nvim
               stay-centered-nvim
               todo-comments-nvim
-              which-key-nvim
+              lazydev-nvim
               which-key-nvim
             ];
 
@@ -89,12 +89,6 @@
               mini-splitjoin
               mini-starter
               mini-surround
-            ];
-          };
-
-          optionalPlugins = {
-            general = with pkgs.vimPlugins; [
-              lazydev-nvim
             ];
           };
 
