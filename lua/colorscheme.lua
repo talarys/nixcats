@@ -10,11 +10,11 @@ end
 vim.api.nvim_create_autocmd('ColorScheme', {
     pattern = '*',
     callback = function()
-        -- copy_highlight('Normal', 'NormalFloat', 'bg')
-        -- copy_highlight('Normal', 'NormalFloat', 'fg')
+        copy_highlight('Normal', 'NormalFloat', 'bg')
+        copy_highlight('Normal', 'NormalFloat', 'fg')
 
-        -- copy_highlight('Normal', 'FloatBorder', 'bg')
-        -- copy_highlight('Normal', 'FloatBorder', 'bg')
+        copy_highlight('Normal', 'FloatBorder', 'bg')
+        copy_highlight('Normal', 'FloatBorder', 'fg')
 
         -- copy_highlight('Normal', 'Pmenu', 'bg')
         -- copy_highlight('CursorLine', 'PmenuSel', 'bg')
