@@ -65,6 +65,7 @@
               todo-comments-nvim
               lazydev-nvim
               which-key-nvim
+              trouble-nvim
             ];
 
             ui = with pkgs.vimPlugins; [

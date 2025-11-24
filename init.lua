@@ -12,6 +12,7 @@ require("plugins.bufferline")
 require("plugins.noice")
 require("plugins.whichkey")
 require("plugins.lualine")
+require("plugins.trouble")
 
 require("keymaps")
 require("autocmds")
