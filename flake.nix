@@ -74,6 +74,7 @@
               lualine-nvim
               noice-nvim
               nvim-web-devicons
+              bufferline-nvim
             ];
 
             mini = with pkgs.vimPlugins; [

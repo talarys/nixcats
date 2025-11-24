@@ -24,4 +24,4 @@ require("snacks").setup({
 	words = { enabled = true },
 })
 
-require("keymaps")
+require("plugins.snacks.keymaps")
