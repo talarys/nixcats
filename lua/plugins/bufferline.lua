@@ -2,6 +2,17 @@ local mocha = require("catppuccin.palettes").get_palette "mocha"
 local latte = require("catppuccin.palettes").get_palette "latte"
 
 require("bufferline").setup({
+  options = {
+    close_command = function(n) Snacks.bufdelete(n) end,
+    right_mouse_command = function(n) Snacks.bufdelete(n) end,
+    diagnostics = "nvim_lsp",
+    always_show_bufferline = false,
+    offsets = {
+      {
+        filetype = "snacks_layout_box",
+      },
+    },
+  },
   highlights = require("catppuccin.special.bufferline").get_theme {
     styles = { "italic", "bold" },
     custom = {
