@@ -44,3 +44,6 @@ map("n", "gpt", "<cmd>Lspsaga peek_type_definition<cr>", { desc = "Peek Type Def
 map("n", "gt", "<cmd>Lspsaga goto_type_definition<cr>", { desc = "Type Definitions" })
 map("n", "K", function() vim.cmd("Lspsaga hover_doc") end, { desc = "Hover Doc" })
 map({ "n", "v", "x" }, "<leader>lf", function() require("conform").format() end, { desc = "Format File" })
+
+
+require("lazydev")
