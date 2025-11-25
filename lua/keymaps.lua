@@ -22,22 +22,22 @@ map("n", "<leader>|", "<cmd>vsplit<cr>", { desc = "vertical split" })
 map("n", "<leader>-", "<cmd>split<cr>", { desc = "horizontal split" })
 
 -- Move with hjkl
-map('n', '<C-h>', '<C-w>h', { desc = 'Move to left window' })
-map('n', '<C-j>', '<C-w>j', { desc = 'Move to bottom window' })
-map('n', '<C-k>', '<C-w>k', { desc = 'Move to top window' })
-map('n', '<C-l>', '<C-w>l', { desc = 'Move to right window' })
+map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
+map("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
+map("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
+map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
 -- Resize with hjkl
-map('n', '<C-a-h>', '<cmd>vertical resize -2<CR>', { desc = 'Decrease window width', silent = true })
-map('n', '<C-a-j>', '<cmd>resize -2<CR>', { desc = 'Decrease window height', silent = true })
-map('n', '<C-a-k>', '<cmd>resize +2<CR>', { desc = 'Increase window height', silent = true })
-map('n', '<C-a-l>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window width', silent = true })
+map("n", "<C-a-h>", "<cmd>vertical resize -2<CR>", { desc = "Decrease window width", silent = true })
+map("n", "<C-a-j>", "<cmd>resize -2<CR>", { desc = "Decrease window height", silent = true })
+map("n", "<C-a-k>", "<cmd>resize +2<CR>", { desc = "Increase window height", silent = true })
+map("n", "<C-a-l>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width", silent = true })
 
 -- Window management
-map('n', '<leader>wv', '<C-w>v', { desc = 'Split window vertically' })
-map('n', '<leader>ws', '<C-w>s', { desc = 'Split window horizontally' })
-map('n', '<leader>wc', '<C-w>c', { desc = 'Close current window' })
-map('n', '<leader>w=', '<C-w>=', { desc = 'Equalize window sizes' })
+map("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
+map("n", "<leader>ws", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<leader>wc", "<C-w>c", { desc = "Close current window" })
+map("n", "<leader>w=", "<C-w>=", { desc = "Equalize window sizes" })
 
 map("v", "p", '"_dP', { noremap = true, silent = true, desc = "Paste without overwriting register" })
 

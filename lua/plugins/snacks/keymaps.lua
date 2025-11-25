@@ -42,7 +42,7 @@ map("n", "<leader>sw", function() Snacks.picker.grep_word() end, { desc = "Visua
 
 -- search
 map("n", '<leader>s"', function() Snacks.picker.registers() end, { desc = "Registers" })
-map("n", '<leader>s/', function() Snacks.picker.search_history() end, { desc = "Search History" })
+map("n", "<leader>s/", function() Snacks.picker.search_history() end, { desc = "Search History" })
 map("n", "<leader>sa", function() Snacks.picker.autocmds() end, { desc = "Autocmds" })
 map("n", "<leader>sb", function() Snacks.picker.lines() end, { desc = "Buffer Lines" })
 map("n", "<leader>sc", function() Snacks.picker.command_history() end, { desc = "Command History" })

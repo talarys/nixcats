@@ -1,10 +1,10 @@
 require("blink.cmp").setup({
-  keymap = { preset = 'enter' },
+  keymap = { preset = "enter" },
 
-  appearance = { nerd_font_variant = 'mono' },
+  appearance = { nerd_font_variant = "mono" },
   completion = { documentation = { auto_show = false } },
   sources = {
-    default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
+    default = { "lazydev", "lsp", "path", "snippets", "buffer" },
     providers = {
       lazydev = {
         name = "LazyDev",

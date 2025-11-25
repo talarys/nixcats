@@ -10,6 +10,7 @@ vim.lsp.enable({
   "hls",
   "just",
   "lua_ls",
+  "jsonls",
   "nixd",
   "nushell",
   "rust_analyzer",

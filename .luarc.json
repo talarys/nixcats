@@ -1,7 +1,22 @@
 {
-    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
-      "diagnostics.globals": [
-        "vim",
-        "Snacks"
-    ],
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+  "diagnostics.globals": [
+    "vim",
+    "Snacks"
+  ],
+  "format": {
+    "enable": true,
+    "defaultConfig": {
+      "indent_style": "space",
+      "indent_size": "2",
+      "quote_style": "double",
+      "call_arg_parentheses": "keep",
+      "table_separator_style": "comma",
+      "column_width": "80",
+      "end_of_line": "lf"
+    }
+  },
+  "diagnostics": {
+    "enable": true
+  }
 }
