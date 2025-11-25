@@ -105,7 +105,7 @@
         };
 
       packageDefinitions = {
-        nixCats =
+        neovim =
           { pkgs, name, ... }:
           {
             settings = {
@@ -113,7 +113,7 @@
               suffix-LD = true;
               aliases = [
                 "vim"
-                "vimcat"
+                "nvim"
               ];
               wrapRc = true;
               configDirName = "nixCats-nvim";
@@ -129,7 +129,7 @@
           };
       };
 
-      defaultPackageName = "nixCats";
+      defaultPackageName = "neovim";
     in
     forEachSystem (
       system:
