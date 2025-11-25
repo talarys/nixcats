@@ -11,7 +11,6 @@ require("plugins.blink")
 require("plugins.bufferline")
 require("plugins.noice")
 require("plugins.whichkey")
-require("plugins.trouble")
 require("plugins.lualine")
 
 require("keymaps")
