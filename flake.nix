@@ -72,7 +72,7 @@
 
             ui = with pkgs.vimPlugins; [
               catppuccin-nvim
-              colorizer
+              nvim-colorizer-lua
               lualine-lsp-progress
               lualine-nvim
               noice-nvim
