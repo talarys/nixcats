@@ -14,13 +14,7 @@ require("bufferline").setup({
     },
   },
   highlights = require("catppuccin.special.bufferline").get_theme {
-    styles = { "italic", "bold" },
-    custom = {
-      all = {},
-      mocha = {
-        fill = { bg = mocha.base },
-      },
-    },
+    styles = { "bold" },
   },
 })
 
