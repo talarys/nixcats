@@ -43,8 +43,12 @@ map("n", "gd", "<cmd>Lspsaga goto_definition<cr>", { desc = "Definitions" })
 map("n", "gpd", "<cmd>Lspsaga peek_definition<cr>", { desc = "Peek Definition" })
 map("n", "gpt", "<cmd>Lspsaga peek_type_definition<cr>", { desc = "Peek Type Definition" })
 map("n", "gt", "<cmd>Lspsaga goto_type_definition<cr>", { desc = "Type Definitions" })
-map("n", "K", function() vim.cmd("Lspsaga hover_doc") end, { desc = "Hover Doc" })
+map("n", "K", "<cmd>Lspsaga hover_doc<cr>", { desc = "Hover Doc" })
 map({ "n", "v", "x" }, "<leader>lf", function() require("conform").format() end, { desc = "Format File" })
 
 
-require("lazydev")
+require("lspsaga").setup({
+  symbol_in_winbar = { enable = true, show_file = true },
+  lightbulb = { sign = false }
+})
+require("lazydev").setup()

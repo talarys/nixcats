@@ -67,6 +67,7 @@
               which-key-nvim
               trouble-nvim
               friendly-snippets
+              lspsaga-nvim
             ];
 
             ui = with pkgs.vimPlugins; [
