@@ -3,6 +3,7 @@ require("snacks").setup({
   animate = { enabled = true },
   buffdelete = { enabled = true },
   bigfile = { enabled = true },
+  dim = { enable = true },
   explorer = { enabled = true },
   gh = { enabled = true },
   gitbrowse = { enabled = true },
@@ -12,9 +13,9 @@ require("snacks").setup({
   lazygit = { enabled = true },
   notifier = { enabled = true, timeout = 3000 },
   picker = { enabled = true },
-  profiler = { enabled = true },
+  -- profiler = { enabled = true },
   quickfile = { enabled = true },
-  scope = { enabled = true },
+  -- scope = { enabled = true },
   scratch = { enabled = true },
   scroll = { enabled = true },
   statuscolumn = { enabled = true },
@@ -22,6 +23,7 @@ require("snacks").setup({
   toggle = { enabled = true },
   util = { enabled = true },
   words = { enabled = true },
+  zen = { enabled = true }
 })
 
 require("plugins.snacks.keymaps")
