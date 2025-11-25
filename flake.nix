@@ -36,7 +36,7 @@
               vscode-langservers-extracted
               gleam
               gopls
-              haskell-language-server
+              haskellPackages.haskell-language-server
               just-lsp
               nixd
               nushell
