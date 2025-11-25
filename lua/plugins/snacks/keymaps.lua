@@ -1,14 +1,11 @@
 local map = vim.keymap.set
 
--- Top Pickers & Explorer
+-- Explorer
 map("n", "<leader><space>", function() Snacks.picker.smart() end, { desc = "Smart Find Files" })
-map("n", "<leader>,", function() Snacks.picker.buffers() end, { desc = "Buffers" })
-map("n", "<leader>/", function() Snacks.picker.grep() end, { desc = "Grep" })
-map("n", "<leader>:", function() Snacks.picker.command_history() end, { desc = "Command History" })
-map("n", "<leader>n", function() Snacks.picker.notifications() end, { desc = "Notification History" })
 map("n", "<leader>e", function() Snacks.explorer() end, { desc = "File Explorer" })
 
 -- find
+map("n", "<leader>f/", function() Snacks.picker.grep() end, { desc = "Grep" })
 map("n", "<leader>fb", function() Snacks.picker.buffers() end, { desc = "Buffers" })
 map("n", "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end,
   { desc = "Find Config Fie" })
@@ -25,6 +22,8 @@ map("n", "<leader>gs", function() Snacks.picker.git_status() end, { desc = "Git 
 map("n", "<leader>gS", function() Snacks.picker.git_stash() end, { desc = "Git Stash" })
 map("n", "<leader>gd", function() Snacks.picker.git_diff() end, { desc = "Git Diff (Hunks)" })
 map("n", "<leader>gf", function() Snacks.picker.git_log_file() end, { desc = "Git Log File" })
+map("n", "<leader>gB", function() Snacks.gitbrowse() end, { desc = "Git Browse" })
+map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 
 -- gh
 map("n", "<leader>gi", function() Snacks.picker.gh_issue() end, { desc = "GitHub Issues (open)" })
@@ -62,6 +61,7 @@ map("n", "<leader>sq", function() Snacks.picker.qflist() end, { desc = "Quickfix
 map("n", "<leader>sR", function() Snacks.picker.resume() end, { desc = "Resume" })
 map("n", "<leader>su", function() Snacks.picker.undo() end, { desc = "Undo History" })
 map("n", "<leader>uC", function() Snacks.picker.colorschemes() end, { desc = "Colorschemes" })
+map("n", "<leader>sn", function() Snacks.picker.notifications() end, { desc = "Notification History" })
 
 -- LSP
 map("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "Goto Definition" })
@@ -73,17 +73,14 @@ map("n", "gai", function() Snacks.picker.lsp_incoming_calls() end, { desc = "Cal
 map("n", "gao", function() Snacks.picker.lsp_outgoing_calls() end, { desc = "Calls Outgoing" })
 map("n", "<leader>ss", function() Snacks.picker.lsp_symbols() end, { desc = "LSP Symbols" })
 map("n", "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, { desc = "LSP Workspace Symbols" })
+map("n", "<leader>lR", function() Snacks.rename.rename_file() end, { desc = "Rename File" })
 
 -- Other
-map("n", "<leader>z", function() Snacks.zen() end, { desc = "Toggle Zen Mode" })
-map("n", "<leader>Z", function() Snacks.zen.zoom() end, { desc = "Toggle Zoom" })
-map("n", "<leader>.", function() Snacks.scratch() end, { desc = "Toggle Scratch Buffer" })
-map("n", "<leader>S", function() Snacks.scratch.select() end, { desc = "Select Scratch Buffer" })
-map("n", "<leader>n", function() Snacks.notifier.show_history() end, { desc = "Notification History" })
-map("n", "<leader>bd", function() Snacks.bufdelete() end, { desc = "Delete Buffer" })
-map("n", "<leader>cR", function() Snacks.rename.rename_file() end, { desc = "Rename File" })
-map("n", "<leader>gB", function() Snacks.gitbrowse() end, { desc = "Git Browse" })
-map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
+map("n", "<leader>uz", function() Snacks.zen() end, { desc = "Toggle Zen Mode" })
+map("n", "<leader>uZ", function() Snacks.zen.zoom() end, { desc = "Toggle Zoom" })
+map("n", "<leader>..", function() Snacks.scratch() end, { desc = "Toggle Scratch Buffer" })
+map("n", "<leader>.s", function() Snacks.scratch.select() end, { desc = "Select Scratch Buffer" })
+-- map("n", "<leader>bd", function() Snacks.bufdelete() end, { desc = "Delete Buffer" })
 map("n", "<leader>un", function() Snacks.notifier.hide() end, { desc = "Dismiss All Notifications" })
 map("n", "<c-/>", function() Snacks.terminal() end, { desc = "Toggle Terminal" })
 map("n", "<c-_>", function() Snacks.terminal() end, { desc = "which_key_ignore" })
