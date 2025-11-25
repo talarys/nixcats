@@ -66,6 +66,7 @@
               lazydev-nvim
               which-key-nvim
               trouble-nvim
+              friendly-snippets
             ];
 
             ui = with pkgs.vimPlugins; [
