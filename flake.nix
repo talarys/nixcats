@@ -47,6 +47,8 @@
               stylua
               shfmt
               ruff
+              haskellPackages.cabal-fmt
+              ormolu
             ];
           };
 

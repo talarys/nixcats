@@ -1,3 +1,14 @@
+vim.lsp.config["hls"] = {
+  cmd = { "haskell-language-server-wrapper", "--lsp" },
+  filetypes = { "haskell", "lhaskell" },
+  settings = {
+    haskell = {
+      formattingProvider = "ormolu",
+      cabalFormattingProvider = "cabal-fmt",
+    },
+  },
+}
+
 vim.lsp.enable({
   "basedpyright",
   "bash_ls",
@@ -17,6 +28,8 @@ vim.lsp.enable({
   "tailwindcss",
   "zls",
 })
+
+
 
 local map = vim.keymap.set
 
