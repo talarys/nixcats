@@ -15,11 +15,11 @@ map("i", "jj", "<esc>", { desc = "Normal Mode" })
 
 map("n", "<leader>qq", "<cmd>quitall!<cr>", { desc = "Quit!" })
 
-map("n", "<esc>", "<esc>:nohlsearch<cr>", { desc = "escape" })
-map("n", "<leader>A", "ggVG", { desc = "select All" })
+map("n", "<esc>", "<esc>:nohlsearch<cr>", { desc = "Escape" })
+map("n", "<leader>A", "ggVG", { desc = "Select All" })
 
-map("n", "<leader>|", "<cmd>vsplit<cr>", { desc = "vertical split" })
-map("n", "<leader>-", "<cmd>split<cr>", { desc = "horizontal split" })
+map("n", "<leader>|", "<cmd>vsplit<cr>", { desc = "Vertical split" })
+map("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 
 -- Move with hjkl
 map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
