@@ -45,6 +45,7 @@
               zls
 
               stylua
+              rustfmt
               shfmt
               ruff
               haskellPackages.cabal-fmt
